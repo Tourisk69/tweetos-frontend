@@ -2,11 +2,17 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
+import { useState } from "react";
 
 
 
 
 function ChildModalsignUp() {
+    const [signUpUsername, setSignUpUsername] = useState('')
+    const [signUpPassword, setSignUpPassword] = useState('')
+    const [signUpEmail, setSignUpEmail] = useState('')
+
+    
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -17,8 +23,15 @@ function ChildModalsignUp() {
     const response = await fetch('http://localhost:3000/', {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
-        body: {}
+        body: {username, email, password}
     })
+    const data = await response.json()
+
+    if(data.result){
+
+
+    }
+
   }
   const handleClose = () => {
     setOpen(false);
