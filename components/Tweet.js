@@ -21,7 +21,6 @@ function Tweet() {
 
         if (data.result){
             dispatch(addTweet(props))
-
         }
         } catch (error) {
             console.log(error);
@@ -42,7 +41,7 @@ function Tweet() {
                 </div>
                 <div>
                     <p>longueur du tweet</p>
-                    <button>Tweet</button>
+                    <button >Tweet</button>
                 </div>
             </div>
             <div>

@@ -20,15 +20,15 @@ function ChildModalsignUp() {
 
 
   const signUp = async () => {
-    const response = await fetch('http://localhost:3000/', {
+    const response = await fetch('http://localhost:3000/users/signup', {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
-        body: {username, email, password}
+        body: {username: signUpUsername, email: signUpEmail, password: signUpPassword}
     })
     const data = await response.json()
 
     if(data.result){
-
+      dispatch(login({username: signUpUsername, token: data.token }))
 
     }
 
