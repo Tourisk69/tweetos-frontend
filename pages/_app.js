@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import bookmarks from '../reducers/bookmarks';
 import user from '../reducers/user';
+import tweet from '../reducers/user';
 import  hiddenArticles  from '../reducers/hiddenArticles';
 
 // redux-persist imports
@@ -14,7 +15,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import storage from 'redux-persist/lib/storage';
 
 
-const reducers = combineReducers({ tweet, user});
+const reducers = combineReducers({tweet, user});
 const persistConfig = { key: 'tweetos', storage };
 
 const store = configureStore({
