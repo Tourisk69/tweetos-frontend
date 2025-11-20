@@ -5,6 +5,7 @@ import Trend from './Trend';
 
 
 
+
 function Home() {
   return (
     <div className={styles.container}>

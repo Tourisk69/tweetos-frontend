@@ -1,4 +1,18 @@
-.container{
-    display:flex;
+.container {
+    display: flex;
     width: 20vw;
+    border-right: 1px solid;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
 }
+
+.logo{
+    width: 30%;
+    height: 20%;
+}
+
+.img {
+    max-width: 100%;
+}
+
