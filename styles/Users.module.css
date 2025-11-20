@@ -1,10 +1,13 @@
+
+
+
 .container {
     display: flex;
     width: 20vw;
     border-right: 1px solid;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 10px;
+    padding: 20px;
 }
 
 .logo{
@@ -16,3 +19,35 @@
     max-width: 100%;
 }
 
+.avatar{
+     width: 15%;
+    height: 15%;
+}
+
+.caseUsers{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    gap: 10px;
+    
+
+}
+
+.utilisateur{
+    margin: 0;
+}
+
+.email{
+    margin:0;
+}
+
+.Users{
+    gap: 15px;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 60%;
+}

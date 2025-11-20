@@ -5,24 +5,22 @@ function Users() {
         <div className={styles.container}>
 
             <div className={styles.logo}>
-                <img src='/logox.png' className={styles.img}/>
+                <img src='/logox.png' className={styles.img} />
             </div>
 
 
-            <div className='users'>
-                <div>
-                    <div>
-                        <h1>Users</h1>
+            <div className={styles.Users}>
 
-                    </div>
-                    <div>
-
+                <div className={styles.caseUsers}>
+                    <img src='/utilisateur.png' className={styles.avatar} />
+                    <div className={styles.presentation}>
+                        <h5 className={styles.utilisateur}>Users</h5>
+                        <p className={styles.email}>email</p>
                     </div>
 
                 </div>
-
                 <div>
-
+                    <button>logout</button>
                 </div>
 
 
