@@ -4,9 +4,9 @@ import Head from 'next/head';
 // redux imports
 import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import bookmarks from '../reducers/bookmarks';
+import tweet from '../reducers/tweet';
 import user from '../reducers/user';
-import  hiddenArticles  from '../reducers/hiddenArticles';
+
 
 // redux-persist imports
 import { persistStore, persistReducer } from 'redux-persist';
@@ -30,13 +30,16 @@ const persistor = persistStore(store);
 
 function App({ Component, pageProps }) {
   return (
-    <>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
       <Head>
         <title>Next.js App</title>
       </Head>
       <Component {...pageProps} />
-    </>
+      </PersistGate>
+    </Provider>
   );
+  
 }
 
 export default App;
