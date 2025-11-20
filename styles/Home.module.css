@@ -1,0 +1,13 @@
+.container{
+  display: flex;
+  justify-content: center;
+  background-color: #151D27;
+  color: aliceblue;
+  border-color: aliceblue;
+  height: 100vh;
+
+ 
+}
+
+
+
