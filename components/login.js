@@ -52,7 +52,7 @@ function Login() {
             <h3>heo</h3>
           </div>
           <div>
-            <ChildModalsignIn />
+            <ChildModalsignUp />
             <p>Already have an account?</p>
             <ChildModalsignIn />
           </div>

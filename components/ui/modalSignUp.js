@@ -33,7 +33,7 @@ function ChildModalsignUp() {
     const response = await fetch('http://localhost:3000/users/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: { username: signUpUsername, email: signUpEmail, password: signUpPassword }
+      body:JSON.stringify ({ username: signUpUsername, email: signUpEmail, password: signUpPassword })
     })
     const data = await response.json()
 
