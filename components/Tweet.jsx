@@ -2,6 +2,7 @@ import styles from "../styles/Tweet.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addTweet } from "../reducers/tweet";
 import { useEffect, useState } from "react";
+import TweetTemplate from "../components/TweetTemplate"
 
 function Tweet() {
   const dispatch = useDispatch();
@@ -11,10 +12,10 @@ function Tweet() {
 
   const [tweets, setTweets] = useState([]);
 
-  useEffect(async () => {
-    const response = await fetch("http://localhost:3000/tweet/allTweets");
-    const data = await response.json();
-  });
+  // useEffect(async () => {
+  //   const response = await fetch("http://localhost:3000/tweet/allTweets");
+  //   const data = await response.json();
+  // });
 
   const tweetClick = async () => {
     // if (!content || content.length > 280){
@@ -55,7 +56,9 @@ function Tweet() {
           <p>{content.length}/280</p>
           <button onClick={tweetClick}>Tweet</button>
         </div>
+              <TweetTemplate></TweetTemplate>
       </div>
+
       <div>{tweet}</div>
     </div>
   );

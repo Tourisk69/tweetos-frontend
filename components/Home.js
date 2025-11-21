@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import Tweet from './Tweet';
+import Tweet from '../components/Tweet';
 import Users from './Users'
 import Trend from './Trend';
 import { useSelector } from 'react-redux';
