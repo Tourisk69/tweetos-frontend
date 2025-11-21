@@ -7,7 +7,6 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import tweet from '../reducers/tweet';
 import user from '../reducers/user';
 
-
 // redux-persist imports
 import { persistStore, persistReducer } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';

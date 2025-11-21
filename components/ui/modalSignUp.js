@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
+import { login } from '../../reducers/user'
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -38,6 +39,7 @@ function ChildModalsignUp() {
     const data = await response.json()
 
     if (data.result) {
+      console.log('result')
       dispatch(login({ username: signUpUsername, token: data.token }))
       setSignUpUsername('');
       setSignUpPassword('');
@@ -64,9 +66,9 @@ function ChildModalsignUp() {
         <Box>
           <img />
           <h4> Create your Hackatweet Account</h4>
-          <input type="text" placeholder="Username" oneChange={(e) => setSignUpUsername(e.target.value)}/>
-          <input type="email" placeholder="email" oneChange={(e) => setSignUpEmail(e.target.value)}/>
-          <input type="password" placeholder="password" oneChange={(e) => setSignUpPassword(e.target.value)}/>
+          <input type="text" placeholder="Username" onChange={(e) => setSignUpUsername(e.target.value)}/>
+          <input type="email" placeholder="email" onChange={(e) => setSignUpEmail(e.target.value)}/>
+          <input type="password" placeholder="password" onChange={(e) => setSignUpPassword(e.target.value)}/>
 
           <Button onClick={signUp}>Close Child Modal</Button>
         </Box>
