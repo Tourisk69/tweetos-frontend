@@ -2,7 +2,11 @@ import styles from "../styles/Tweet.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addTweet } from "../reducers/tweet";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD:components/Tweet.js
 import TweetTemplate from "../components/TweetTemplate";
+=======
+import TweetTemplate from "../components/TweetTemplate"
+>>>>>>> d20be340be502be9bf5ce7ebbb626e70fd7eba42:components/Tweet.jsx
 
 function Tweet() {
   const dispatch = useDispatch();
@@ -13,6 +17,7 @@ function Tweet() {
   const [tweets, setTweets] = useState([]);
   console.log(tweets);
 
+<<<<<<< HEAD:components/Tweet.js
   //   useEffect( () => {
   //     const fetchTweets = async() => {
   //         const response = await fetch("http://localhost:3000/tweet/allTweets");
@@ -26,6 +31,12 @@ function Tweet() {
   const allTweets = tweets.map((data, i) => {
     return <TweetTemplate key={i} {...data} />;
   });
+=======
+  // useEffect(async () => {
+  //   const response = await fetch("http://localhost:3000/tweet/allTweets");
+  //   const data = await response.json();
+  // });
+>>>>>>> d20be340be502be9bf5ce7ebbb626e70fd7eba42:components/Tweet.jsx
 
   const tweetClick = async () => {
     if (!content || content.length > 280){
@@ -68,8 +79,14 @@ function Tweet() {
           <p>{content.length}/280</p>
           <button onClick={tweetClick} className={styles.tweetBtn}>Tweet</button>
         </div>
+              <TweetTemplate></TweetTemplate>
       </div>
+<<<<<<< HEAD:components/Tweet.js
       <div>{allTweets}</div>
+=======
+
+      <div>{tweet}</div>
+>>>>>>> d20be340be502be9bf5ce7ebbb626e70fd7eba42:components/Tweet.jsx
     </div>
   );
 }
