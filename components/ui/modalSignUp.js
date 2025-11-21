@@ -34,7 +34,7 @@ function ChildModalsignUp() {
     const response = await fetch('http://localhost:3000/users/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: signUpUsername, email: signUpEmail, password: signUpPassword })
+      body:JSON.stringify ({ username: signUpUsername, email: signUpEmail, password: signUpPassword })
     })
     const data = await response.json()
 
@@ -66,11 +66,11 @@ function ChildModalsignUp() {
         <Box>
           <img />
           <h4> Create your Hackatweet Account</h4>
-          <input type="text" placeholder="Username" onChange={(e) => setSignUpUsername(e.target.value)}/>
-          <input type="email" placeholder="email" onChange={(e) => setSignUpEmail(e.target.value)}/>
-          <input type="password" placeholder="password" onChange={(e) => setSignUpPassword(e.target.value)}/>
+          <input type="text" placeholder="Username" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername}/>
+          <input type="email" placeholder="email" onChange={(e) => setSignUpEmail(e.target.value)} value={signUpEmail}/>
+          <input type="password" placeholder="password" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword}/>
 
-          <Button onClick={signUp}>Close Child Modal</Button>
+          <Button onClick={() => signUp()}>Close Child Modal</Button>
         </Box>
       </Modal>
     </React.Fragment>
