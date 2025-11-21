@@ -6,8 +6,6 @@ import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import tweet from '../reducers/tweet';
 import user from '../reducers/user';
-import tweet from '../reducers/user';
-import  hiddenArticles  from '../reducers/hiddenArticles';
 
 // redux-persist imports
 import { persistStore, persistReducer } from 'redux-persist';

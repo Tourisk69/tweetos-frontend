@@ -3,7 +3,7 @@ import Tweet from './Tweet';
 import Users from './Users'
 import Trend from './Trend';
 import { useSelector } from 'react-redux';
-import { Login } from '../components/login';
+import  Login  from '../components/login';
 
 
 
