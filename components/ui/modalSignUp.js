@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 function ChildModalsignUp() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.token);
+  const users = useSelector((state) => state.user.token);
 
 
 
