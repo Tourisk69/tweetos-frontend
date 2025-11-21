@@ -1,5 +1,4 @@
 import styles from "../styles/TweetTemplate.module.css"
-import moment from "react-moment"
 
 
    
