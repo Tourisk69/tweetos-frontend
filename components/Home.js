@@ -15,11 +15,13 @@ const token = useSelector((state)=> state.user.token)
 
 
   return (
-    <>
-     <Login/>
+    <div className= {styles.container}>
+     <Users />
+     <Tweet/>
+     <Trend />
     
     
-    </>
+    </div>
    
 
 
