@@ -13,15 +13,15 @@ function Tweet() {
   const [tweets, setTweets] = useState([]);
   console.log(tweets);
 
-  //   useEffect( () => {
-  //     const fetchTweets = async() => {
-  //         const response = await fetch("http://localhost:3000/tweet/allTweets");
-  //     const data = await response.json();
-  //     setTweets(data.filter((data, i ) => i>0))
+    useEffect( () => {
+      const fetchTweets = async() => {
+          const response = await fetch("http://localhost:3000/tweet/allTweets");
+      const data = await response.json();
+      setTweets(data.filter((data, i ) => i>0))
 
-  //     }
-  //     fetchTweets()
-  //   }, []);
+      }
+      fetchTweets()
+    }, []);
 
   const allTweets = tweets.map((data, i) => {
     return <TweetTemplate key={i} {...data} />;
