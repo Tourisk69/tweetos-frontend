@@ -6,11 +6,13 @@ import { login } from '../../reducers/user'
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 
 
 
 function ChildModalsignUp() {
+  const router = useRouter()
   const dispatch = useDispatch();
   const users = useSelector((state) => state.user.token);
 
@@ -44,7 +46,9 @@ function ChildModalsignUp() {
       setSignUpUsername('');
       setSignUpPassword('');
       setSignUpEmail('');
+      router.push('../Home')
       handleClose()
+
 
     }
 
