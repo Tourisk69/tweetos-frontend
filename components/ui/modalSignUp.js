@@ -66,11 +66,11 @@ function ChildModalsignUp() {
         <Box>
           <img />
           <h4> Create your Hackatweet Account</h4>
-          <input type="text" placeholder="Username" onChange={(e) => setSignUpUsername(e.target.value)}/>
-          <input type="email" placeholder="email" onChange={(e) => setSignUpEmail(e.target.value)}/>
-          <input type="password" placeholder="password" onChange={(e) => setSignUpPassword(e.target.value)}/>
+          <input type="text" placeholder="Username" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername}/>
+          <input type="email" placeholder="email" onChange={(e) => setSignUpEmail(e.target.value)} value={signUpEmail}/>
+          <input type="password" placeholder="password" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword}/>
 
-          <Button onClick={signUp}>Close Child Modal</Button>
+          <Button onClick={() => signUp()}>Close Child Modal</Button>
         </Box>
       </Modal>
     </React.Fragment>
